@@ -24,7 +24,7 @@ export default function WeatherResults() {
   const [cityName, setCityName] = useState('');
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    const options = { weekday: 'short'};
+    const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
     return date.toLocaleDateString('en-US', options);
   };
 

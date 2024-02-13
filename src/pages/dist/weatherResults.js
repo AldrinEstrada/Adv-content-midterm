@@ -24,7 +24,7 @@ function WeatherResults() {
     var _c = react_1.useState(''), cityName = _c[0], setCityName = _c[1];
     var formatDate = function (dateString) {
         var date = new Date(dateString);
-        var options = { weekday: 'short' };
+        var options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
         return date.toLocaleDateString('en-US', options);
     };
     var weatherIcons = {
