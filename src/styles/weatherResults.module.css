@@ -67,3 +67,34 @@
     align-items: center;
     justify-content: center;
 }
+
+
+@media (max-width: 768px) {
+    .main {
+      padding: 20px;
+    }
+  
+    .currentWeatherDisplay {
+      padding: 15px;
+      margin-bottom: 15px;
+    }
+  
+    .fiveDayWeatherDisplay {
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main {
+      padding: 10px;
+    }
+  
+    .currentWeatherDisplay {
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  
+    .fiveDayWeatherDisplay {
+      padding: 10px;
+    }
+  }
