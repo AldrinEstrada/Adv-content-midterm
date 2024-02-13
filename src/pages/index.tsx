@@ -7,10 +7,9 @@ const Home = () => {
   const router  = useRouter();
   const [cityName, setCityName] = useState('');
 
-  const handleCityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleCityChange = (e) => {
     setCityName(e.target.value);
   };
-
 
   const handleSearch = () => {
     router.push(`/weatherResults?cityName=${cityName}`);
@@ -24,7 +23,8 @@ const Home = () => {
           src={'/images/brutherlogo.png'}
           height={120}
           width={100}
-          alt="bruther logo"
+          autoPlay={false}
+          controls={true}
         />
 
         <h1>Bruhther</h1>

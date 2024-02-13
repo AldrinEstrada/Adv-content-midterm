@@ -15,7 +15,7 @@ var Home = function () {
     };
     return (React.createElement("div", { className: Home_module_css_1["default"].main },
         React.createElement("div", { className: Home_module_css_1["default"].appTitle },
-            React.createElement(image_1["default"], { className: Home_module_css_1["default"].animation, src: '/images/brutherlogo.png', height: 120, width: 100, alt: "bruther logo" }),
+            React.createElement(image_1["default"], { className: Home_module_css_1["default"].animation, src: '/images/brutherlogo.png', height: 120, width: 100, autoPlay: false, controls: true }),
             React.createElement("h1", null, "Bruhther"),
             React.createElement("h3", null, "Weather for the bros"),
             React.createElement("p", null, "Check the weather today bruh!")),

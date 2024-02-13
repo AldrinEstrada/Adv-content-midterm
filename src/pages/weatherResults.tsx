@@ -5,26 +5,13 @@ import Image from 'next/image'
 
 export default function WeatherResults() {
   const apiKey = process.env.NEXT_PUBLIC_API;
-  const [data, setData] = useState<IWeatherForecast | undefined>(undefined);
-  // const [dailyData, setDailyData] = useState<IWeatherForecast["list"]>([]);
-  const [dailyData, setDailyData] = useState<IWeatherForecast["list"]>([{
-    main: {
-      temp: 0,
-    },
-    weather: [{
-      main: "",
-      description: "",
-    }],
-    wind: {
-      speed: 0,
-    },
-    dt_txt: ""
-  }]);
+  const [data, setData] = useState<IWeatherForecast["list"][0]>();
+  const [dailyData, setDailyData] = useState<IWeatherForecast["list"]>([]);
   const router = useRouter();
   const [cityName, setCityName] = useState('');
-  const formatDate = (dateString: string) => {
+  const formatDate = (dateString) => {
     const date = new Date(dateString);
-    const options: Intl.DateTimeFormatOptions = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+    const options = { weekday: 'short'};
     return date.toLocaleDateString('en-US', options);
   };
 
@@ -38,7 +25,7 @@ export default function WeatherResults() {
 
   useEffect(() => {
     const { cityName } = router.query;
-    if (typeof cityName === 'string') {
+    if (cityName) {
       setCityName(cityName);
       const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${apiKey}`;
       fetch(url)
