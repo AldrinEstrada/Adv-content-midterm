@@ -1,0 +1,38 @@
+/* body {
+    background-color: lightcyan;
+    margin: 0;
+
+} */
+
+.main {
+    font-family: 'Arial';
+    padding: 10rem;
+}
+
+.appTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.searchTab {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+.search {
+    width: 40%;
+}
+
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
