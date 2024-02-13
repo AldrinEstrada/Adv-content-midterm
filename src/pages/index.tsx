@@ -11,7 +11,7 @@ const Home = () => {
     setCityName(e.target.value);
   };
 
-  
+
   const handleSearch = () => {
     router.push(`/weatherResults?cityName=${cityName}`);
   };
@@ -24,8 +24,6 @@ const Home = () => {
           src={'/images/brutherlogo.png'}
           height={120}
           width={100}
-          autoPlay={false}
-          controls={true}
         />
 
         <h1>Bruhther</h1>
