@@ -24,7 +24,7 @@ const Home = () => {
           src={'/images/brutherlogo.png'}
           height={120}
           width={100}
-          alt={'logo'}
+          alt="bruther logo"
         />
 
         <h1>Bruhther</h1>
