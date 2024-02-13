@@ -5,7 +5,7 @@ var router_1 = require("next/router");
 var weatherResults_module_css_1 = require("@/styles/weatherResults.module.css");
 function WeatherResults() {
     var apiKey = process.env.NEXT_PUBLIC_API;
-    var _a = react_1.useState(), data = _a[0], setData = _a[1];
+    var _a = react_1.useState(undefined), data = _a[0], setData = _a[1];
     // const [dailyData, setDailyData] = useState<IWeatherForecast["list"]>([]);
     var _b = react_1.useState([{
             main: {

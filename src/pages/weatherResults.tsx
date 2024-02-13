@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function WeatherResults() {
   const apiKey = process.env.NEXT_PUBLIC_API;
-  const [data, setData] = useState<IWeatherForecast["list"][0]>();
+  const [data, setData] = useState<IWeatherForecast | undefined>(undefined);
   // const [dailyData, setDailyData] = useState<IWeatherForecast["list"]>([]);
   const [dailyData, setDailyData] = useState<IWeatherForecast["list"]>([{
     main: {
