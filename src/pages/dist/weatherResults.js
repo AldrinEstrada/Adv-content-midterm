@@ -34,7 +34,7 @@ function WeatherResults() {
     };
     react_1.useEffect(function () {
         var cityName = router.query.cityName;
-        if (cityName) {
+        if (typeof cityName === 'string') {
             setCityName(cityName);
             var url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=metric&appid=" + apiKey;
             fetch(url)
