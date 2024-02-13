@@ -7,10 +7,11 @@ const Home = () => {
   const router  = useRouter();
   const [cityName, setCityName] = useState('');
 
-  const handleCityChange = (e) => {
+  const handleCityChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCityName(e.target.value);
   };
 
+  
   const handleSearch = () => {
     router.push(`/weatherResults?cityName=${cityName}`);
   };
