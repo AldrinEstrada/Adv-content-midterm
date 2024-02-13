@@ -6,7 +6,20 @@ import Image from 'next/image'
 export default function WeatherResults() {
   const apiKey = process.env.NEXT_PUBLIC_API;
   const [data, setData] = useState<IWeatherForecast["list"][0]>();
-  const [dailyData, setDailyData] = useState<IWeatherForecast["list"]>([]);
+  // const [dailyData, setDailyData] = useState<IWeatherForecast["list"]>([]);
+  const [dailyData, setDailyData] = useState<IWeatherForecast["list"]>([{
+    main: {
+      temp: 0,
+    },
+    weather: [{
+      main: "",
+      description: "",
+    }],
+    wind: {
+      speed: 0,
+    },
+    dt_txt: ""
+  }]);
   const router = useRouter();
   const [cityName, setCityName] = useState('');
   const formatDate = (dateString) => {
