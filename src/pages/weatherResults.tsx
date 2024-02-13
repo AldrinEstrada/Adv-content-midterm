@@ -22,7 +22,7 @@ export default function WeatherResults() {
   }]);
   const router = useRouter();
   const [cityName, setCityName] = useState('');
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     const options = { weekday: 'short'};
     return date.toLocaleDateString('en-US', options);
