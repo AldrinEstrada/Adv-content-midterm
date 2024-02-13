@@ -7,19 +7,7 @@ function WeatherResults() {
     var apiKey = process.env.NEXT_PUBLIC_API;
     var _a = react_1.useState(undefined), data = _a[0], setData = _a[1];
     // const [dailyData, setDailyData] = useState<IWeatherForecast["list"]>([]);
-    var _b = react_1.useState([{
-            main: {
-                temp: 0
-            },
-            weather: [{
-                    main: "",
-                    description: ""
-                }],
-            wind: {
-                speed: 0
-            },
-            dt_txt: ""
-        }]), dailyData = _b[0], setDailyData = _b[1];
+    var _b = react_1.useState([]), dailyData = _b[0], setDailyData = _b[1];
     var router = router_1.useRouter();
     var _c = react_1.useState(''), cityName = _c[0], setCityName = _c[1];
     var formatDate = function (dateString) {
