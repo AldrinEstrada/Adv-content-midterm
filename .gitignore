@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+NEXT_PUBLIC_API = "619696440078c9cca26c919cbff3f30a"
